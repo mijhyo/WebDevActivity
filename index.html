@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.1">
+        <title>Web Development Activity</title>
+        <style>
+            table {
+                width: 95%;
+                margin: 0 auto;
+            }
+
+            table, tr, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            .menu {
+                width: 35px;
+                margin: 0;
+                max-width: 150px;
+                min-width: 100px;
+            }
+
+            .main-page {
+                width: calc(100vh - 100px);
+                min-width: 450px;
+            }
+
+            iframe {
+                width: 100%;
+                float: right;
+                height: 600px;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td class="menu">
+                    <ul>
+                        <li><a href="table.html" target="mainPage">Table</a></li>
+                        <li><a href="link.html" target="mainPage">Link</a></li>
+                    </ul>
+                </td>
+                <td class="main-page">
+                    <iframe name="mainPage" src="table.html"></iframe>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
