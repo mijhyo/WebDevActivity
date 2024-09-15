@@ -1,12 +1,131 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>WD1 Activity</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activity 3</title>
+        <style>
+            main {
+                width: 475px;
+                margin: 0 auto;
+            }
+
+            .title {
+                display: flex;
+            }
+
+            h1 {
+                margin: auto;
+                color: red;
+            }
+
+            form {
+                width: 410px;
+                margin: 0 auto;
+            }
+
+            div.info {
+                display: flex;
+                margin-bottom: 5px;
+            }
+
+            div.info > label {
+                width: 155px;
+            }
+            
+            div.info > input {
+                width: 150px;
+            }
+
+            div.info > select {
+                width: 85px;
+            }
+
+            div.pronoun, div.button {
+                margin-left: 155px;
+            }
+
+            div.add-info > label {
+                margin: auto 0;
+            }
+        </style>
     </head>
-    <frameset cols="20%, 80%">
-        <frame name="navPage" src="navPage.html" noresize></frame>
-        <frame name="mainPage" src="tablePage.html"></frame>
-    </frameset>
+    <body>
+        <main>
+            <div class="title">
+                <img height="60px" src="employee-vector.png">
+                <h1>Employee Registration Form</h1>
+            </div>
+            <form>
+                <div class="pronoun">
+                    <input type="radio" value="Mr." name="pronoun" checked><label>Mr.</label>
+                    <input type="radio" value="Mrs." name="pronoun"><label>Mrs.</label>
+                    <input type="radio" value="Ms." name="pronoun"><label>Ms.</label>
+                </div>
+                <div class="info">
+                    <label>First Name</label>
+                    <input type="text" placeholder="First Name" required>
+                </div>
+                <div class="info">
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+                <div class="info">
+                    <label>Mail Address1</label>
+                    <input type="text" required>
+                </div>
+                <div class="info">
+                    <label>Mail Address2</label>
+                    <input type="text">
+                </div>
+                <div class="info">
+                    <label>City</label>
+                    <input type="text" required>
+                </div>
+                <div class="info">
+                    <label>State</label>
+                    <select>
+                        <option value="">Select</option>
+                        <option value="State1">Gujarat</option>
+                        <option value="State2">Hindi</option>
+                        <option value="State3">English</option>
+                        <option value="State4">Marathi</option>
+                    </select>
+                </div>
+                <div class="info">
+                    <label>Zip</label>
+                    <input type="text" pattern="[0-9]{5}" required>
+                </div>
+                <div class="info">
+                    <label>Upload Photo</label>
+                    <input type="file" style="width: 255px;" required>
+                </div>
+                <div class="info">
+                    <label>E-Mail</label>
+                    <input type="email" style="width: 200px;" required>
+                </div>
+                <div class="info">
+                    <label>Mobile</label>
+                    <input type="tel" placeholder="+91" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                </div>
+                <div class="info">
+                    <label>Languages known</label>
+                    <div class="languages-option">
+                        <label><input type="checkbox" value="Lang1">Gujarati</label><br>
+                        <label><input type="checkbox" value="Lang2">Hindi</label><br>
+                        <label><input type="checkbox" value="Lang3">English</label><br>
+                        <label><input type="checkbox" value="Lang4">Marathi</label><br>
+                    </div>
+                </div>
+                <div class="info add-info">
+                    <label>Additional Information</label>
+                    <textarea placeholder="Optional" rows="4" cols="23"></textarea>
+                </div>
+                <div class="button">
+                    <input type="submit">
+                    <input type="reset">
+                </div>
+            </form>
+        </main>
+    </body>
 </html>
